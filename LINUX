@@ -1,0 +1,7 @@
+on linux you can compile 64 bit or 32 bit and with or without the libc
+
+make # does 64 bit
+make BITS=32 # does 32 bit
+make LIBC=yes # 64 bits, uses the system C library
+make BITS=32 LIBC=yes # 32 bits, uses the system C library
+

@@ -1,0 +1,4 @@
+all:
+	gcc -m32 -c bare_metal/os.S -o bare_metal/os.o
+	dmd -m32 -debug -c minimal.d object.d invariant.d memory.d bare_metal/textmode.d -gc -defaultlib= -debuglib= -version=bare_metal -debug=allocations bare_metal/idt.d
+	gcc  -T bare_metal/os.ld minimal.o object.o invariant.o memory.o textmode.o idt.o -o minimal -g -m32 -nostdlib  bare_metal/os.o 

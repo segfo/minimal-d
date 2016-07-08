@@ -1,0 +1,21 @@
+you can make the program with
+
+make -f Makefile.bare
+
+nothing super special is needed, just a linux gcc that can make 32 bit programs.
+
+the exe will be called minimal. running it on linux will result in a segfault (since it will try to write to video memory) but if you copy it on to the grub floppy it will work there, or use it on qemu -kernel
+
+Easiest: just run "qemu -kernel minimal"
+
+
+Floppy method:
+	to copy on to the floppy i mount it as a loopback device on linux, copy the file, then umount
+	you can run with qemu like this
+	qemu -fda floppy.img
+
+	you can get floppy.img from
+	http://arsdnet.net/dcode/floppy.img
+
+	I think the floppy will work on a real computer too if you wanted to write it to a disk,
+	but idk for sure.

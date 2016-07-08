@@ -1,0 +1,1 @@
+Original source :[minimal.zip](http://arsdnet.net/dcode/minimal.zip) (author: Adam D. Ruppe)
